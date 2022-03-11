@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  nestjs-api-tutorial:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=ilovenestjs
+      - POSTGRES_DB=nest
+    networks:
+    - freecodecamp
+networks:
+  freecodecamp:
