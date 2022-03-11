@@ -1,0 +1,29 @@
+{
+  "name": "MyNestJSTest",
+  "description": "this app for testing my nest js.",
+  "website": "https://tooljet.io/",
+  "repository": "https://github.com/tooljet/tooljet",
+  "logo": "https://app.tooljet.io/assets/images/logo.svg",
+  "success_url": "/",
+  "scripts":{
+    "predeploy": "npm install && npm run build"
+  },
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment [production/development]",
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "image": "heroku/nodejs",
+  "addons": ["heroku-postgresql"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
